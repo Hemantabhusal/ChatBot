@@ -2,20 +2,9 @@ from config.config import ACTION_KEYWORDS
 import subprocess
 
 def execute_action(intent, memory):
-    """
-    Executes a system command based on the recognized intent and logs the action into memory.
-
-    Args:
-        intent (str): The recognized intent.
-        memory: The conversational memory object.
-
-    Returns:
-        str: A message indicating the result of the action.
-    """
     if intent in ACTION_KEYWORDS:
         command, message = ACTION_KEYWORDS[intent]
         try:
-            # Execute the system command
             subprocess.run(command, shell=True, check=True)
 
             # Log the action into memory

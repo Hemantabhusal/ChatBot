@@ -24,7 +24,7 @@ groq_chat = ChatGroq(
 
 # Initialize conversational memory
 memory = ConversationBufferWindowMemory(
-    window_size=5,  # Number of recent exchanges to remember
+    window_size=5, 
     memory_key="chat_history",
     return_messages=True,
 )
@@ -40,26 +40,13 @@ prompt = ChatPromptTemplate.from_messages(
 
 
 def process_query(user_input):
-    """
-    Processes user input with conversational memory.
-
-    Args:
-        user_input (str): The user's input.
-
-    Returns:
-        str: The chatbot's response.
-    """
-    # Create an LLMChain for generating responses
     conversation = LLMChain(
         llm=groq_chat,
         prompt=prompt,
         verbose=False,
         memory=memory,
     )
-
-    # Use the LLM to predict a response based on user input
     return conversation.predict(human_input=user_input)
-
 
 def main():
     """
@@ -72,11 +59,9 @@ def main():
             print("Goodbye! Have a great day!")
             break
 
-        # Handle intent
         if handle_intent(user_input, memory):
             continue
 
-        # Handle general conversation using process_query
         response = process_query(user_input)
         print(f"Eva: {response}")
 

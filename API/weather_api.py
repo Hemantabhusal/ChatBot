@@ -2,15 +2,6 @@ import requests
 from config.config import OPENWEATHER_API_KEY
 
 def get_weather(city):
-    """
-    Fetches weather data for a given city using the OpenWeatherMap API.
-
-    Args:
-        city (str): City name.
-
-    Returns:
-        str: Weather details or an error message.
-    """
     base_url = "http://api.openweathermap.org/data/2.5/weather"
     params = {
         "q": city,

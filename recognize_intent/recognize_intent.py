@@ -4,15 +4,6 @@ from actions.action import execute_action
 from config.config import INTENT_KEYWORDS
 
 def get_intent(user_input):
-    """
-    Identifies the user's intent and routes it to the appropriate handler.
-
-    Args:
-        user_input (str): The input from the user.
-
-    Returns:
-        tuple: (intent_type, handler_function) if intent is recognized, (None, None) otherwise.
-    """
     # Check for Pokémon intent
     if recognize_pokemon_intent(user_input):
         return "pokemon", handle_pokemon_intent
@@ -30,16 +21,6 @@ def get_intent(user_input):
     return None, None
 
 def handle_intent(user_input, memory):
-    """
-    Handles recognized intents by executing actions, calling APIs, or logging responses to memory.
-
-    Args:
-        user_input (str): The user's input.
-        memory: The conversational memory object.
-
-    Returns:
-        bool: True if an intent was recognized and handled, False otherwise.
-    """
     intent, handler = get_intent(user_input)
 
     if intent:

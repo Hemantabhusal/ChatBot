@@ -6,12 +6,6 @@ BASE_URL = "https://pokeapi.co/api/v2"
 POKEMON_NAMES = None
 
 def initialize_pokemon_names():
-    """
-    Fetch all Pokémon names from the API and store in memory.
-
-    Returns:
-        set: Set of Pokémon names, or empty set on failure.
-    """
     global POKEMON_NAMES
     if POKEMON_NAMES is not None:
         return POKEMON_NAMES
@@ -28,15 +22,6 @@ def initialize_pokemon_names():
         return set()
 
 def get_pokemon_info(pokemon_name):
-    """
-    Fetch and return information about a Pokémon by name.
-
-    Args:
-        pokemon_name (str): Name of the Pokémon (e.g., 'pikachu').
-
-    Returns:
-        str: Pokémon details or an error message.
-    """
     endpoint = f"/pokemon/{pokemon_name.lower()}"
     url = BASE_URL + endpoint
 
