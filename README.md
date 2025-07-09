@@ -212,7 +212,7 @@ Contributions are welcome! To contribute:
 
 ## 🪪 License
 
-[MIT License](./LICENSE) – Free to use, modify, and distribute. Commercial and personal use allowed.
+Free to use, modify, and distribute. Commercial and personal use allowed.
 
 ---
 
@@ -220,19 +220,7 @@ Contributions are welcome! To contribute:
 
 - Ensure `.env` is correctly configured before launching the bot
 - The system commands are **Windows-specific**; support for macOS/Linux can be added by extending `system_actions.py`
-- Make sure the APIs (Groq, OpenWeather) have sufficient quota and access rights
+- Make sure the APIs (Groq, OpenWeather, Pokemon) have sufficient quota and access rights
 
----
-
-## 🏷️ Badges (optional)
-
-You can add these at the top if desired:
-
-```markdown
-![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-```
-
----
 
 Happy Chatting! 🤖💬
