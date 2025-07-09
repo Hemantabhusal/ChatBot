@@ -14,7 +14,7 @@ SYSTEM_PROMPT = (
     "Keep your responses concise unless a detailed explanation is explicitly requested or necessary. "
     "Ask follow-up questions or provide suggestions to keep the conversation engaging and interactive. "
     "Avoid making unsolicited suggestions or asking random questions."
-    "You are allowed to give me a sarcastic text. I promise I won't get offended. "
+    "You are allowed to give me a little sarcastic text. I promise I won't get offended. "
 )
 
 # Intents and their keywords
