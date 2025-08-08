@@ -46,54 +46,6 @@ A conversational AI chatbot built with **Python**, powered by the **Groq LLaMA 3
 
 ---
 
-## 🧾 requirements.txt
-
-Below is the full list of dependencies used in this project:
-
-```text
-annotated-types==0.7.0
-anyio==4.9.0
-certifi==2025.1.31
-charset-normalizer==3.4.1
-click==8.1.8
-colorama==0.4.6
-comtypes==1.4.10
-distro==1.9.0
-greenlet==3.1.1
-groq==0.20.0
-gTTS==2.5.4
-h11==0.14.0
-httpcore==1.0.7
-httpx==0.28.1
-idna==3.10
-jsonpatch==1.33
-jsonpointer==3.0.0
-langchain==0.3.21
-langchain-core==0.3.49
-langchain-groq==0.3.1
-langchain-text-splitters==0.3.7
-langsmith==0.3.19
-orjson==3.10.16
-packaging==24.2
-PyAudio==0.2.14
-pydantic==2.10.6
-pydantic_core==2.27.2
-pydub==0.25.1
-pypiwin32==223
-pyttsx3==2.98
-pywin32==310
-PyYAML==6.0.2
-requests==2.32.3
-requests-toolbelt==1.0.0
-sniffio==1.3.1
-SpeechRecognition==3.14.2
-SQLAlchemy==2.0.39
-tenacity==9.0.0
-typing_extensions==4.13.0
-urllib3==2.3.0
-zstandard==0.23.0
-```
-
 Install all dependencies with:
 
 ```bash
@@ -167,52 +119,6 @@ Edit `config.py` to tweak:
 The chatbot is also configured for a **concise, slightly sarcastic tone** by default via the system prompt.
 
 ---
-
-## 📁 Project Structure
-
-```text
-ChatBot/
-├── actions/
-│   ├── __init__.py               # Initializes the actions module
-│   └── action.py                 # Executes system-level actions (e.g., open apps, shutdown)
-
-├── API/
-│   ├── __init__.py               # Initializes the API module
-│   ├── pokemon_api.py            # Fetches Pokémon data from custom API
-│   └── weather_api.py            # Fetches weather data from OpenWeather API
-
-├── config/
-│   ├── __init__.py               # Initializes the config module
-│   └── config.py                 # Stores API keys and model configuration
-
-├── recognize_intent/
-│   ├── __init__.py               # Initializes the intent recognition module
-│   ├── pokemon_intent.py         # Parses and handles Pokémon-related user queries
-│   ├── recognize_intent.py       # Central intent handler and router
-│   └── weather_intent.py         # Parses and handles weather-related user queries
-
-├── .env                          # Stores environment variables (DO NOT COMMIT)
-├── .gitignore                    # Git ignore file (e.g., ignores .env, __pycache__)
-├── main.py                       # Main script to run the chatbot
-├── README.md                     # Project documentation
-└── requirements.txt              # Python package dependencies
-```
-
-## 🧑‍💻 Contributing
-
-Contributions are welcome! To contribute:
-
-```bash
-# Fork this repo
-# Create a new branch for your feature or bugfix
-# Submit a pull request with clear description
-```
-
----
-
-## 🪪 License
-
-Free to use, modify, and distribute. Commercial and personal use allowed.
 
 ---
 
